@@ -1,15 +1,26 @@
-Source: template-repository
-Section: unknown
+Source: python-pytest-retry
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Michael R. Crusoe <crusoe@debian.org>
+Section: python
+Testsuite: autopkgtest-pkg-pybuild
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               pybuild-plugin-pyproject,
+               python3-setuptools,
+               dh-sequence-python3,
+               python3-all,
+               python3-pytest <!nocheck>
+Standards-Version: 4.6.2
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-pytest-retry
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-pytest-retry.git
+Homepage: https://github.com/str0zzapreti/pytest-retry
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-pytest-retry
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends}
+Enhances: python3-pytest
+Description: Adds the ability to retry flaky tests in pytest
+ A plugin for Pytest which adds the ability to retry flaky tests,
+ thereby improving the consistency of the test suite results.

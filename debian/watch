@@ -1,0 +1,4 @@
+version=4
+# try also https://pypi.debian.net/pytest-retry/watch
+opts=uversionmangle=s/(rc|a|b|c)/~$1/ \
+https://pypi.debian.net/pytest-retry/pytest-retry-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
