@@ -1,5 +1,11 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-pytest-retry (1.6.2-2) unstable; urgency=medium
 
-  * Initial release
+  * No-change, source-only upload.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Michael R. Crusoe <crusoe@debian.org>  Thu, 14 Mar 2024 13:43:19 +0100
+
+python-pytest-retry (1.6.2-1) unstable; urgency=low
+
+  * Initial release; Closes: #1066026
+
+ -- Michael R. Crusoe <crusoe@debian.org>  Mon, 11 Mar 2024 08:22:50 +0000
